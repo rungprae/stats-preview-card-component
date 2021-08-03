@@ -1,60 +1,78 @@
 body {
   background-color: hsl(233, 47%, 7%);
-  padding: 0 20px;
-  margin: 0;
+  padding: 25px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: "Inter", sans-serif;
+  margin: 0;
+  min-height: calc(100vh - 50px);
 }
 .card {
-  max-width: 500px;
+  max-width: 450px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   background-color: hsl(244, 38%, 16%);
-  margin-top: 85px;
-  margin-bottom: 85px;
   border-radius: 8px;
 }
 /* background */
+.cover {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 240px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
 .background-heading {
   width: 100%;
   height: 240px;
-  background-size: 100% 240px;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  background-size: cover;
   background-image: url(/images/image-header-mobile.jpg);
-  background-blend-mode: soft-light;
-  background-color: hsl(277, 64%, 61%);
+}
+.alpha {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  opacity: 0.6;
+  background-color: hsl(277deg 76% 33%);
 }
 /* content */
 .content {
-  padding: 0 40px 30px;
+  padding: 40px 35px;
 }
 /* main heading */
 .main-heading {
   color: hsl(0, 0%, 100%);
   font-weight: 700;
-  font-size: 25px;
-  margin: 40px 0 10px;
+  font-size: 24px;
+  margin: 0;
+  line-height: 1.5;
 }
 /* main paragraph */
 .main-paragraph {
-  font-weight: 400px;
+  font-weight: 400;
   font-size: 15px;
   color: hsla(0, 0%, 100%, 0.75);
-  margin-bottom: 50px;
-  line-height: 25px;
+  margin: 20px 0 0;
+  line-height: 1.6;
 }
 /* stat */
 .stat1 {
-  margin-bottom: 30px;
+  margin-top: 35px;
 }
 .stat-heading {
   color: hsl(0, 0%, 100%);
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin: 0;
 }
 .stat-paragraph {
+  margin: 15px 0 0;
   font-size: 11px;
   font-weight: 400;
   text-transform: uppercase;
@@ -103,7 +121,8 @@ body {
   .background-heading {
     display: none;
   }
-  .background1-heading {
+  .background-heading {
+    order: 2;
     width: 100%;
     height: 100%;
     background-size: 100% 100%;
